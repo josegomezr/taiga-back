@@ -164,8 +164,8 @@ LOCALE_PATHS = (
 )
 
 SITES = {
-    "api": {"domain": "localhost:8000", "scheme": "http", "name": "api"},
-    "front": {"domain": "localhost:9001", "scheme": "http", "name": "front"},
+    "api": {"domain": "kanban.veca:80", "scheme": "http", "name": "api"},
+    "front": {"domain": "kanban.veca:80", "scheme": "http", "name": "front"},
 }
 
 SITE_ID = "api"
@@ -194,8 +194,8 @@ MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 # The absolute url is mandatory because attachments
 # urls depends on it. On production should be set
 # something like https://media.taiga.io/
-MEDIA_URL = "http://localhost:8000/media/"
-STATIC_URL = "http://localhost:8000/static/"
+MEDIA_URL = "http://kanban.veca/media/"
+STATIC_URL = "http://kanban.veca/static/"
 
 # Static configuration.
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
@@ -543,7 +543,7 @@ GITLAB_VALID_ORIGIN_IPS = []
 EXPORTS_TTL = 60 * 60 * 24  # 24 hours
 
 CELERY_ENABLED = False
-WEBHOOKS_ENABLED = False
+WEBHOOKS_ENABLED = True
 
 
 # If is True /front/sitemap.xml show a valid sitemap of taiga-front client
